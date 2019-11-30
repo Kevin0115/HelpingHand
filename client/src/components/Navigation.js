@@ -12,6 +12,7 @@ import {
   NavDropdown,
   Button,
 } from 'react-bootstrap';
+import QR from './QR';
 
 import './Navigation.css';
 
@@ -66,6 +67,7 @@ function Main() {
     <div className="main">
       <h2>Display ID:</h2>
       {id}
+      <QR rid={id} />
       {/* <h2>I am a...</h2>
       <Button
         className="nav-button"
