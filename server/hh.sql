@@ -62,6 +62,22 @@ insert into merchant values (111128, 'Best Buy');
 insert into merchant values (111129, 'Future Shop');
 insert into merchant values (111130, 'Apple Store');
 
+insert into donation values(333331, 20.00, 999991, '2019-11-30 12:00:00');
+insert into donation values(333332, 25.00, 999992, '2019-11-30 12:30:00');
+insert into donation values(333333, 0.50, 999991, '2019-11-30 12:35:00');
+insert into donation values(333334, 0.25, 999991, '2019-11-30 12:40:00');
+insert into donation values(333335, 0.10, 999992, '2019-11-30 12:45:00');
+insert into donation values(333336, 14.00, 999993, '2019-11-30 12:50:00');
+insert into donation values(333337, 15.00, 999994, '2019-11-30 12:55:00');
+insert into donation values(333338, 29.00, 999993, '2019-11-30 01:00:00');
+insert into donation values(333339, 13.50, 999991, '2019-11-30 01:05:00');
+insert into donation values(333340, 50.00, 999995, '2019-11-30 01:10:00');
+insert into donation values(333341, 60.00, 999994, '2019-11-30 01:30:00');
+insert into donation values(333342, 30.00, 999993, '2019-11-30 01:45:00');
+insert into donation values(333343, 25.00, 999994, '2019-11-30 01:50:00');
+insert into donation values(333344, 10.00, 999993, '2019-11-30 01:55:00');
+insert into donation values(333345, 90.00, 999992, '2019-11-30 02:15:00');
+
 insert into transaction values (611111, 999991, 111111, '2019-11-30 12:00:00', 2.00);
 insert into transaction values (611112, 999992, 111112, '2019-11-30 12:01:00', 3.00);
 insert into transaction values (611113, 999993, 111113, '2019-11-30 12:02:00', 4.00);
