@@ -21,7 +21,7 @@ exports.get_all_receivers = async (req, res) => {
 }
 
 exports.create_receiver = async (req, res) => {
-  const rid = req.body.rid;
+  const rid = Math.floor((Math.random() * 999999) + 1);
   const uname = req.body.uname;
   const pin = req.body.pin;
   const question = req.body.question;

@@ -7,6 +7,4 @@ router.get('/', transaction_controller.get_all_transactions);
 router.post(`/`, transaction_controller.create_transaction);
 
 
-
-
 module.exports = router;
