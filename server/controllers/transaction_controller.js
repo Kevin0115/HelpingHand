@@ -1,24 +1,24 @@
 const connection = require('../config/db_config');
 
 exports.get_all_transactions = async (req, res) => {
-    query = {
-      text: `select * from transaction`
-    }
-  
-    try {
-      const query_result = await connection.query(query);
-      res.send({
-        success: true,
-        content: query_result.rows
-      });
-    } catch(err) {
-      console.error(err);
-      res.send({
-        success: false,
-        content: err.detail
-      });
-    }
+  query = {
+    text: `select * from transaction`
   }
+
+  try {
+    const query_result = await connection.query(query);
+    res.send({
+      success: true,
+      content: query_result.rows
+    });
+  } catch(err) {
+    console.error(err);
+    res.send({
+      success: false,
+      content: err.detail
+    });
+  }
+}
 
 exports.create_transaction = async (req, res) => {
   const tid = req.body.tid;

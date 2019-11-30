@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   HashRouter as Router,
   Switch,
   Route,
   Link,
-  useParams
+  useParams,
+  Redirect
 } from 'react-router-dom';
+import { withRouter } from "react-router";
 import {
   Navbar,
   Nav,
@@ -16,8 +18,9 @@ import QR from './QR';
 
 import './Navigation.css';
 
-import Customer from './Customer';
-import Clerk from './Clerk';
+import Main from './Main';
+import Merchant from './Merchant';
+import Donate from './Donate';
 
 class Navigation extends React.Component {
   render() {
@@ -35,58 +38,39 @@ class Navigation extends React.Component {
             {' Helping Hand '}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          {/* <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
               <NavDropdown title={'Menu'} id="collasible-nav-dropdown" drop="left">
-                <NavDropdown.Item as={Link} to={"/merchant"}>Merchant Page</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to={"/merchant/"}>Merchant Page</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href={"https://github.com/Kevin0115/HelpingHand"}>GitHub Repo</NavDropdown.Item>
               </NavDropdown>
             </Nav>
-          </Navbar.Collapse>
+          </Navbar.Collapse> */}
         </Navbar>
         <Switch>
           <Route exact path={"/"}>
-            <Main />
+            <Navigator />
           </Route>
-          <Route path={"/:id"}>
-            <Main />
+          <Route path={"/:user/:rid"}>
+            <Navigator />
           </Route>
-          {/* <Route path={"/merchant"}>
-            <Merchant />
-          </Route> */}
         </Switch>
       </Router>
     );
   }
 }
 
-function Main() {
-  const { id } = useParams()
-  return (
-    <div className="main">
-      <h2>Display ID:</h2>
-      {id}
-      <QR rid={id} />
-      {/* <h2>I am a...</h2>
-      <Button
-        className="nav-button"
-        variant="secondary"
-        size="lg"
-        as={Link} to={"/customer"}
-      >
-        Customer
-      </Button>
-      <Button
-        className="nav-button"
-        variant="secondary"
-        size="lg"
-        as={Link} to={"/clerk"}
-      >
-        Clerk
-      </Button> */}
-    </div>
-  );
+function Navigator() {
+  const { rid, user } = useParams();
+  switch (user) {
+    case "donate" :
+      return <Donate rid={rid} />
+    case "merchant" :
+      return <Merchant rid={rid} />
+    default:
+      return <Main rid={rid} />
+  }
 }
 
 export default Navigation;
