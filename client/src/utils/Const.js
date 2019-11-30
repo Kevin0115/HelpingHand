@@ -1,6 +1,8 @@
 // API Endpoints
-// export const API_BASE = 'http://localhost:8080/';
-export const API_BASE = 'https://ec2.kevnchoi.com/';
+export const API_BASE = 'http://localhost:8080/';
+// export const API_BASE = 'https://ec2.kevnchoi.com/';
+
+export const CLIENT_URL = 'https://kevinchoi.dev/';
 
 // API Method
 export const POST = 'POST';

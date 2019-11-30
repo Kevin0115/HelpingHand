@@ -33,3 +33,9 @@ create table transaction (
   foreign key (rid) references receiver,
   foreign key (mid) references merchant
 );
+
+insert into receiver values (1, 'Kevin', 1234);
+insert into receiver values (2, 'Edmund', 1234);
+insert into receiver values (3, 'Doon', 1234);
+insert into receiver values (4, 'Emma', 1234);
+insert into receiver values (5, 'Gary', 1234);
