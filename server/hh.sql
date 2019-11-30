@@ -6,7 +6,7 @@ drop table receiver;
 create table receiver (
   rid integer not null primary key,
   uname varchar(50) not null,
-  balance real not null,
+  balance real constraint sufficient_balance check (balance >= 0) not null,
   pin integer not null,
   question varchar(50),
   answer varchar(50)
