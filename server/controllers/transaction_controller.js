@@ -2,7 +2,7 @@ const connection = require('../config/db_config');
 
 exports.get_all_transactions = async (req, res) => {
     query = {
-      text: select * from transaction
+      text: `select * from transaction`
     }
   
     try {
