@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
   Link,
+  useParams
 } from 'react-router-dom';
 import {
   Navbar,
@@ -25,22 +26,20 @@ class Navigation extends React.Component {
           <Navbar.Brand href={process.env.PUBLIC_URL}>
             <img
               src={require('../logo.png')}
-              width="90"
+              width="30"
               height="30"
               className="d-inline-block align-top"
               alt=" "
             />
-            {' SuperRent '}
+            {' Helping Hand '}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-              <NavDropdown title={'Change User'} id="collasible-nav-dropdown" drop="left">
-                <NavDropdown.Item as={Link} to={"/customer"}>Customer</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to={"/clerk"}>Clerk</NavDropdown.Item>
+              <NavDropdown title={'Menu'} id="collasible-nav-dropdown" drop="left">
+                <NavDropdown.Item as={Link} to={"/merchant"}>Merchant Page</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href={"https://github.com/Kevin0115/SuperRent"}>GitHub Repo</NavDropdown.Item>
-                <NavDropdown.Item href={"https://ec2.kevnchoi.com/"}>Server URL</NavDropdown.Item>
+                <NavDropdown.Item href={"https://github.com/Kevin0115/HelpingHand"}>GitHub Repo</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
@@ -49,12 +48,12 @@ class Navigation extends React.Component {
           <Route exact path={"/"}>
             <Main />
           </Route>
-          <Route path={"/customer"}>
-            <Customer />
+          <Route path={"/:id"}>
+            <Main />
           </Route>
-          <Route path={"/clerk"}>
-            <Clerk />
-          </Route>
+          {/* <Route path={"/merchant"}>
+            <Merchant />
+          </Route> */}
         </Switch>
       </Router>
     );
@@ -62,9 +61,12 @@ class Navigation extends React.Component {
 }
 
 function Main() {
+  const { id } = useParams()
   return (
     <div className="main">
-      <h2>I am a...</h2>
+      <h2>Display ID:</h2>
+      {id}
+      {/* <h2>I am a...</h2>
       <Button
         className="nav-button"
         variant="secondary"
@@ -80,7 +82,7 @@ function Main() {
         as={Link} to={"/clerk"}
       >
         Clerk
-      </Button>
+      </Button> */}
     </div>
   );
 }
