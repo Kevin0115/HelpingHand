@@ -20,6 +20,7 @@ create table donation (
   did integer not null primary key,
   amount real not null,
   rid integer not null,
+  ts timestamp not null,
   foreign key (rid) references receiver
 );
 
