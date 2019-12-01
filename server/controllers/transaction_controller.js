@@ -44,8 +44,8 @@ exports.create_transaction = async (req, res) => {
 
   try {
     const insert_query_result = await connection.query(insert_query);
-    const udpate_query_result = await connection.query(update_query);
-    console.log(udpate_query_result);
+    const update_query_result = await connection.query(update_query);
+    console.log(update_query_result);
     console.log(insert_query_result);
     res.send({
       success: true,
