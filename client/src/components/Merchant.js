@@ -1,6 +1,7 @@
 import React from 'react';
 import { API_BASE, GET, POST } from '../utils/Const';
 import { Card, Form, FormControl, Button, Alert } from 'react-bootstrap';
+import './Components.css';
 
 class Merchant extends React.Component {
   constructor(props) {

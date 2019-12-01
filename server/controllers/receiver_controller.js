@@ -53,7 +53,7 @@ exports.create_receiver = async (req, res) => {
 
   query = {
     text: `insert into receiver
-            values ($1,$2,$3,$4,$5)`,
+            values ($1,$2,0,$3,$4,$5)`,
     values: [rid, uname, pin, question, answer]
   }
 
@@ -62,7 +62,7 @@ exports.create_receiver = async (req, res) => {
     console.log(query_result);
     res.send({
       success: true,
-      content: 'Receiver successfully created.'
+      content: rid
     });
   } catch(err) {
     console.error(err);

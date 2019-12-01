@@ -15,6 +15,7 @@ import {
   Button,
 } from 'react-bootstrap';
 import QR from './QR';
+import './Components.css';
 
 import './Navigation.css';
 
@@ -40,7 +41,7 @@ class Navigation extends React.Component {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-            <Nav.Link href="/register/1">
+            <Nav.Link href="/#/register">
               Register
             </Nav.Link>
           </Navbar.Collapse>
@@ -48,6 +49,9 @@ class Navigation extends React.Component {
         <Switch>
           <Route exact path={"/"}>
             <Navigator />
+          </Route>
+          <Route path={"/register"}>
+            <Register />
           </Route>
           <Route path={"/:user/:rid"}>
             <Navigator />
@@ -65,8 +69,6 @@ function Navigator() {
       return <Donate rid={rid} />
     case 'merchant' :
       return <Merchant rid={rid} />
-    case 'register' :
-      return <Register />
     default:
       return <Main rid={rid} />
   }

@@ -1,4 +1,4 @@
-.donate, .merchant {
+.donate, .merchant, .register {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,6 +22,10 @@
 .alert {
   position: fixed;
   top: 32px;
+}
+
+.form {
+  margin-top: 32px;
 }
 
 .card {
@@ -59,4 +63,11 @@
 .input {
   width: 128px;
   margin-left: 16px;
+}
+
+.qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 0;
 }
