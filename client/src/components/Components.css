@@ -1,0 +1,62 @@
+.donate, .merchant {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 32px;
+}
+
+.donate > * {
+  margin: 16px 0;
+}
+
+.buttons {
+  display: flex;
+  flex: row;
+}
+
+.select-button {
+  margin: 4px;
+}
+
+.alert {
+  position: fixed;
+  top: 32px;
+}
+
+.card {
+  margin-top: 16px;
+  width: 85vw;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title {
+  width: 100%;
+  text-align: center;
+}
+
+.card-body > * {
+  margin: 24px 0;
+}
+
+.amount, .merchant-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.amount, .merchant-input > p {
+  margin: 0;
+}
+
+.input {
+  width: 128px;
+  margin-left: 16px;
+}

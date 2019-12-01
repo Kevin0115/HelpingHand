@@ -1,4 +1,5 @@
 const connection = require('../config/db_config');
+const moment = require('moment');
 
 exports.get_all_transactions = async (req, res) => {
   query = {
@@ -21,13 +22,11 @@ exports.get_all_transactions = async (req, res) => {
 }
 
 exports.create_transaction = async (req, res) => {
-  const tid = req.body.tid;
+  const tid = Math.floor((Math.random() * 999999) + 1);
   const rid = req.body.rid;
   const mid = req.body.mid;
-  const ts = req.body.ts;
+  const ts = moment().format('YYYY-MM-DD hh:mm:ssA');
   const amount = req.body.amount;
-
-  console.log(req.body);
 
   insert_query = {
     text: `insert into transaction
@@ -45,11 +44,9 @@ exports.create_transaction = async (req, res) => {
   try {
     const insert_query_result = await connection.query(insert_query);
     const udpate_query_result = await connection.query(update_query);
-    console.log(udpate_query_result);
-    console.log(insert_query_result);
     res.send({
       success: true,
-      content: 'Transaction successfully created.'
+      content: 'Transaction successfully processed.'
     });
   } catch(err) {
     console.error(err);

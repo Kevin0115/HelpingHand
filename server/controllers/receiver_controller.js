@@ -20,6 +20,30 @@ exports.get_all_receivers = async (req, res) => {
   }
 }
 
+exports.get_receiver = async (req, res) => {
+  const rid = req.params.rid;
+  query = {
+    text: `select *
+            from receiver
+            where rid = $1`,
+    values: [rid]
+  }
+
+  try {
+    const query_result = await connection.query(query);
+    res.send({
+      success: true,
+      content: query_result.rows[0]
+    })
+  } catch(err) {
+    console.error(err);
+    res.send({
+      success: false,
+      content: err.detail
+    });
+  }
+}
+
 exports.create_receiver = async (req, res) => {
   const rid = Math.floor((Math.random() * 999999) + 1);
   const uname = req.body.uname;

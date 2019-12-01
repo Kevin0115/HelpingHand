@@ -25,7 +25,7 @@ exports.create_donation = async (req, res) => {
   const did = Math.floor((Math.random() * 999999) + 1);
   const amount = req.body.amount;
   const rid = req.body.rid;
-  const ts = moment().format('YYYY-MM-DD hh:mm:ssA')
+  const ts = moment().format('YYYY-MM-DD hh:mm:ssA');
 
   insert_query = {
     text: `insert into donation

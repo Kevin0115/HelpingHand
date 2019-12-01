@@ -21,13 +21,14 @@ import './Navigation.css';
 import Main from './Main';
 import Merchant from './Merchant';
 import Donate from './Donate';
+import Register from './Register';
 
 class Navigation extends React.Component {
   render() {
     return(
       <Router>
         <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href={process.env.PUBLIC_URL}>
+          <Navbar.Brand>
             <img
               src={require('../logo.png')}
               width="30"
@@ -38,15 +39,11 @@ class Navigation extends React.Component {
             {' Helping Hand '}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          {/* <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
-              <NavDropdown title={'Menu'} id="collasible-nav-dropdown" drop="left">
-                <NavDropdown.Item as={Link} to={"/merchant/"}>Merchant Page</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href={"https://github.com/Kevin0115/HelpingHand"}>GitHub Repo</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse> */}
+          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+            <Nav.Link href="/register/1">
+              Register
+            </Nav.Link>
+          </Navbar.Collapse>
         </Navbar>
         <Switch>
           <Route exact path={"/"}>
@@ -64,10 +61,12 @@ class Navigation extends React.Component {
 function Navigator() {
   const { rid, user } = useParams();
   switch (user) {
-    case "donate" :
+    case 'donate' :
       return <Donate rid={rid} />
-    case "merchant" :
+    case 'merchant' :
       return <Merchant rid={rid} />
+    case 'register' :
+      return <Register />
     default:
       return <Main rid={rid} />
   }
