@@ -2,7 +2,7 @@
   "name": "web_client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kevin0115.github.io/SuperRent",
+  "homepage": "https://kevin0115.github.io/HelpingHand",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.1.1",
