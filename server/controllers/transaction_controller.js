@@ -28,6 +28,12 @@ exports.create_transaction = async (req, res) => {
   const ts = moment().format('YYYY-MM-DD hh:mm:ssA');
   const amount = req.body.amount;
 
+  merchant_query = {
+    text: `select * from merchant
+            where mid = $1`,
+    values: [mid]
+  }
+
   insert_query = {
     text: `insert into transaction
             values ($1,$2,$3,$4,$5)`,
@@ -42,10 +48,17 @@ exports.create_transaction = async (req, res) => {
   }
 
   try {
+    const merchant_query_result = await connection.query(merchant_query);
+    if (merchant_query_result.rows.length <= 0) {
+      res.send({
+        success: false,
+        content: 'This merchant does not exist'
+      })
+    }
+
     const insert_query_result = await connection.query(insert_query);
     const update_query_result = await connection.query(update_query);
-    console.log(update_query_result);
-    console.log(insert_query_result);
+
     res.send({
       success: true,
       content: 'Transaction successfully processed.'
