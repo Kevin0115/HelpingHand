@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/HelpingHand/static/css/main.88a47e58.chunk.css",
-    "main.js": "/HelpingHand/static/js/main.647ce13b.chunk.js",
-    "main.js.map": "/HelpingHand/static/js/main.647ce13b.chunk.js.map",
+    "main.css": "/HelpingHand/static/css/main.e864405e.chunk.css",
+    "main.js": "/HelpingHand/static/js/main.e6757f03.chunk.js",
+    "main.js.map": "/HelpingHand/static/js/main.e6757f03.chunk.js.map",
     "runtime-main.js": "/HelpingHand/static/js/runtime-main.1f9d3c7d.js",
     "runtime-main.js.map": "/HelpingHand/static/js/runtime-main.1f9d3c7d.js.map",
     "static/js/2.87272f25.chunk.js": "/HelpingHand/static/js/2.87272f25.chunk.js",
     "static/js/2.87272f25.chunk.js.map": "/HelpingHand/static/js/2.87272f25.chunk.js.map",
     "index.html": "/HelpingHand/index.html",
-    "precache-manifest.ec228fca141570bc88e52c55271eaa4c.js": "/HelpingHand/precache-manifest.ec228fca141570bc88e52c55271eaa4c.js",
+    "precache-manifest.087dcc3d94f267af8774b5479f63f1cf.js": "/HelpingHand/precache-manifest.087dcc3d94f267af8774b5479f63f1cf.js",
     "service-worker.js": "/HelpingHand/service-worker.js",
-    "static/css/main.88a47e58.chunk.css.map": "/HelpingHand/static/css/main.88a47e58.chunk.css.map",
+    "static/css/main.e864405e.chunk.css.map": "/HelpingHand/static/css/main.e864405e.chunk.css.map",
     "static/media/logo.png": "/HelpingHand/static/media/logo.46cae660.png"
   },
   "entrypoints": [
     "static/js/runtime-main.1f9d3c7d.js",
     "static/js/2.87272f25.chunk.js",
-    "static/css/main.88a47e58.chunk.css",
-    "static/js/main.647ce13b.chunk.js"
+    "static/css/main.e864405e.chunk.css",
+    "static/js/main.e6757f03.chunk.js"
   ]
 }
