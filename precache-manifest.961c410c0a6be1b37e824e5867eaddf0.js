@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6d1961ff3a566bf2c1e4fc0bcfd2fc84",
+    "revision": "1b3d22bf584c728d621815bae4e0023b",
     "url": "/HelpingHand/index.html"
   },
   {
-    "revision": "5e9d1cc65513a5271577",
+    "revision": "7381c76875fddc3ed3c8",
     "url": "/HelpingHand/static/css/main.e864405e.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/HelpingHand/static/js/2.87272f25.chunk.js"
   },
   {
-    "revision": "5e9d1cc65513a5271577",
-    "url": "/HelpingHand/static/js/main.4a39d1c9.chunk.js"
+    "revision": "7381c76875fddc3ed3c8",
+    "url": "/HelpingHand/static/js/main.f3888845.chunk.js"
   },
   {
     "revision": "16c2fd78ad96dd6e8033",
