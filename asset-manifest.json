@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/HelpingHand/static/css/main.e864405e.chunk.css",
-    "main.js": "/HelpingHand/static/js/main.095f3c1f.chunk.js",
-    "main.js.map": "/HelpingHand/static/js/main.095f3c1f.chunk.js.map",
+    "main.js": "/HelpingHand/static/js/main.60d24744.chunk.js",
+    "main.js.map": "/HelpingHand/static/js/main.60d24744.chunk.js.map",
     "runtime-main.js": "/HelpingHand/static/js/runtime-main.1f9d3c7d.js",
     "runtime-main.js.map": "/HelpingHand/static/js/runtime-main.1f9d3c7d.js.map",
     "static/js/2.87272f25.chunk.js": "/HelpingHand/static/js/2.87272f25.chunk.js",
     "static/js/2.87272f25.chunk.js.map": "/HelpingHand/static/js/2.87272f25.chunk.js.map",
     "index.html": "/HelpingHand/index.html",
-    "precache-manifest.3545b2afae37ae7c5464fb27d37cbacf.js": "/HelpingHand/precache-manifest.3545b2afae37ae7c5464fb27d37cbacf.js",
+    "precache-manifest.cf9e6bab923dbd6bccb4c2a6ea59e8e1.js": "/HelpingHand/precache-manifest.cf9e6bab923dbd6bccb4c2a6ea59e8e1.js",
     "service-worker.js": "/HelpingHand/service-worker.js",
     "static/css/main.e864405e.chunk.css.map": "/HelpingHand/static/css/main.e864405e.chunk.css.map",
     "static/media/logo.png": "/HelpingHand/static/media/logo.46cae660.png"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1f9d3c7d.js",
     "static/js/2.87272f25.chunk.js",
     "static/css/main.e864405e.chunk.css",
-    "static/js/main.095f3c1f.chunk.js"
+    "static/js/main.60d24744.chunk.js"
   ]
 }
