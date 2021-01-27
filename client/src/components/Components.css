@@ -1,4 +1,7 @@
-.donate, .merchant, .register {
+.donate,
+.merchant,
+.register,
+.help {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,7 +33,7 @@
 
 .card {
   margin-top: 16px;
-  width: 85vw;
+  width: 40vw;
 }
 
 .card-body {
@@ -70,4 +73,8 @@
   flex-direction: column;
   align-items: center;
   margin: 24px 0;
+}
+
+.markdown {
+  max-width: 600px;
 }

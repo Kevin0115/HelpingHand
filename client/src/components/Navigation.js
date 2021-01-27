@@ -23,6 +23,9 @@ import Main from './Main';
 import Merchant from './Merchant';
 import Donate from './Donate';
 import Register from './Register';
+import Help from './Help';
+
+const BASENAME = "/HelpingHand/"
 
 class Navigation extends React.Component {
   render() {
@@ -30,28 +33,36 @@ class Navigation extends React.Component {
       <Router>
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand>
-            <img
-              src={require('../logo.png')}
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-              alt=" "
-            />
-            {' Helping Hand '}
+            <Link to="/" className="link">
+              <img
+                src={require('../logo.png')}
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+                alt=" "
+              />
+            {' Helping Hand (v1.1) '}
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-            <Nav.Link href="/#/register">
+            <Link to="/register/" className="link">
               Register
-            </Nav.Link>
+            </Link>
+            <Link to="/help/" className="link">
+              Help
+            </Link>
           </Navbar.Collapse>
         </Navbar>
         <Switch>
-          <Route exact path={"/"}>
+          <Route exact path="/">
             <Navigator />
           </Route>
           <Route path={"/register"}>
             <Register />
+          </Route>
+          <Route path={"/help"}>
+            <Help />
           </Route>
           <Route path={"/:user/:rid"}>
             <Navigator />

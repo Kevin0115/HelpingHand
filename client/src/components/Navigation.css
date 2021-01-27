@@ -11,3 +11,10 @@
   width: 200px;
   margin: 8px 0;
 }
+
+.link,
+.link:hover {
+  color: white;
+  text-decoration: none;
+  margin-left: 24px;
+}
